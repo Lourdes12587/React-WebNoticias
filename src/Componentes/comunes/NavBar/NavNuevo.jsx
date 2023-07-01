@@ -28,9 +28,6 @@ const NavNuevo = () => {
 
                 <Menu click={click}>
                     <MenuItem onClick={() => ChangeClick()}>
-                        <Link to="/Home">HOME</Link>
-                    </MenuItem>
-                    <MenuItem onClick={() => ChangeClick()}>
                         <Link to="/Secciones">SECCIONES</Link>
                     </MenuItem>
                     <MenuItem onClick={() => ChangeClick()}>    

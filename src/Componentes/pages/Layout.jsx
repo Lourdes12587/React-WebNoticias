@@ -9,7 +9,6 @@ const Layout = () => {
             <Outlet/>
         </section>
         <nav>
-            <Link to="/Home">INICIO</Link>
             <Link to="/Secciones">Secciones</Link>
             <Link to="/Contacto">Contacto</Link>
         </nav> 
