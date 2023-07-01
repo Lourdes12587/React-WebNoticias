@@ -39,7 +39,7 @@ export const Contacto = () => {
     <>
       <form onSubmit={handleSubmit}>
         <StyledFormControl >
-          <Heading as='h2'>CONTACTO</Heading>
+          <Heading as='h2'style={{ fontFamily: 'Bai Jamjuree'}}>CONTACTO</Heading>
           <FormField>
             <FormLabel>Nombre Completo:</FormLabel>
             <StyledInput 
@@ -68,7 +68,6 @@ export const Contacto = () => {
             name='mensaje'
             onChange={handleChange}
             placeholder='Ingrese su mensaje'
-            size='sm'
           />
           </FormField>
           

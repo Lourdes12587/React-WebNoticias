@@ -6,14 +6,12 @@ import { Contacto } from './Componentes/pages/Contacto';
 import Layout from './Componentes/pages/Layout';
 import NavNuevo from './Componentes/comunes/NavBar/NavNuevo';
 import Footer from './Componentes/comunes/Footer/Footer';
-import Navbar1 from './Componentes/comunes/NavBar/Navbar1';
 
 
 function App() {
   
   return (
     <>
-      <Navbar1/>
       <NavNuevo/>
         <Routes>
           <Route path="/" element={<Layout/>}/>
