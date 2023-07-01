@@ -3,6 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { IoLogoFacebook, IoLogoWhatsapp, IoLogoInstagram} from "react-icons/io";
 
 export default function Navbar1 () {
 
@@ -16,6 +18,15 @@ export default function Navbar1 () {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1}} style={{ fontFamily: 'Bai Jamjuree'}}>
             Mendoza, 29 de Junio del 2023
         </Typography>
+        <Link to='/' style={{ paddingLeft: '2rem'}}>
+          <IoLogoFacebook size={"3em"} />
+        </Link>
+        <Link to='/' style={{ paddingLeft: '2rem'}}>
+          <IoLogoWhatsapp size={"3em"}/>
+        </Link>
+        <Link to='/' style={{ paddingLeft: '2rem' }}>
+          <IoLogoInstagram size={"3em"} />
+        </Link>
         </Toolbar>
       </AppBar>
     </Box>
