@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from './ButtonStyled'
+import { Button } from '../Button/ButtonStyled'
 
 const ButtonList = ({categories, filterCategory}) => {
   return (

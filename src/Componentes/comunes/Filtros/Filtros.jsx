@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import ArticleList from '../Filtros/ArticleList';
-import ButtonList from '../Filtros/ButtonList';
+import ArticleList from '../Article/ArticleList';
+import ButtonList from '../Button/ButtonList';
 import { noticias } from '../../../data/NoticiasData';
-import { Container } from './FiltrosStyled'
+import { Container } from '../Filtros/FiltrosStyled'
 
 const Filtros = () => {
 

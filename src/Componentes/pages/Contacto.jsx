@@ -41,33 +41,30 @@ export const Contacto = () => {
         <StyledFormControl >
           <Heading as='h2'style={{ fontFamily: 'Bai Jamjuree'}}>CONTACTO</Heading>
           <FormField>
-            <FormLabel>Nombre Completo:</FormLabel>
+            <FormLabel>Nombre Completo</FormLabel>
             <StyledInput 
             type='text'
             name='name'
-            placeholder='Ingrese Nombre Completo'
             onChange={handleChange}
             />
           </FormField>
 
           <FormField>
-            <FormLabel>Email:</FormLabel>
+            <FormLabel>Email</FormLabel>
             <StyledInput 
             type='email'
             name='email' 
             onChange={handleChange}
-            placeholder='Ingrese Email'
 
             />
           </FormField>
 
           <FormField>
-            <FormLabel>Mensaje:</FormLabel>
+            <FormLabel>Mensaje</FormLabel>
             <StyledTextarea
             type='text'
             name='mensaje'
             onChange={handleChange}
-            placeholder='Ingrese su mensaje'
           />
           </FormField>
           

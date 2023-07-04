@@ -1,12 +1,17 @@
 import { Container, Grid, Card, CardMedia, CardContent,
 Typography, CardActionArea} from "@mui/material";
 import React from 'react'
+import { Link} from "react-router-dom";
     
 export const ArticleList = ({ articles }) => {
+
         return (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px'}}>
+
                 {articles.map(article => (
-              <Container>
+
+              <Container key={article.id}>
+  
                 <Grid container spacing={5} sx={{mt:3}}/>
                   <Grid 
                   item 
@@ -22,18 +27,17 @@ export const ArticleList = ({ articles }) => {
                       content='img'
                       image={article.image}
                       sx={{ height: 320 }}
-    
-                      title="green iguana"
                       />
                       <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        {article.titulo}
+                      {article.titulo}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {article.descripcion}
+                      {article.descripcion}
                       </Typography>
                       </CardContent>
                     </CardActionArea>
+                    <Link to={`${ article.id}`}>LEER MAS</Link>
                     </Card>
                 </Grid>  
               </Container>
