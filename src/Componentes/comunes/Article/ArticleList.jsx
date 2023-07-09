@@ -1,18 +1,20 @@
 import { Container, Grid, Card, CardMedia, CardContent,
 Typography, CardActionArea} from "@mui/material";
 import React from 'react'
-import { Link} from "react-router-dom";
     
 export const ArticleList = ({ articles }) => {
 
         return (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px'}}>
+            <div style={{ display: 'grid', 
+            gridTemplateColumns: 'repeat(2, 1fr)', 
+            gap: '20px'}}>
 
-                {articles.map(article => (
+            {articles.map ( article => (
 
               <Container key={article.id}>
   
                 <Grid container spacing={5} sx={{mt:3}}/>
+
                   <Grid 
                   item 
                   xs ={12}
@@ -37,12 +39,12 @@ export const ArticleList = ({ articles }) => {
                       </Typography>
                       </CardContent>
                     </CardActionArea>
-                    <Link to={`${ article.id}`}>LEER MAS</Link>
                     </Card>
                 </Grid>  
               </Container>
     
                 ))}
+
             </div>
         )
     };

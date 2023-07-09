@@ -24,8 +24,7 @@ export const Contacto = () => {
       validationSchema : Yup.object({
         nombre: Yup.string().required('Campo requerido'),
         email: Yup.string().required('Campo requerido'),
-        mensaje: Yup.string()
-        .required('Campo requerido')
+        mensaje: Yup.string().required('Campo requerido')
       }),
   
       onSubmit: (formdata)=>{

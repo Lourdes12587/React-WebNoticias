@@ -21,7 +21,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout/>}/>
             <Route index element={<Secciones/>}/>
-            <Route path="secciones/:id" element={<News/>}/>
             <Route path="contacto" element={<Contacto/>}/>
             <Route path="login1" element={<Login1/>}/>
             <Route path="fetch" element={<Fetch/>}/>

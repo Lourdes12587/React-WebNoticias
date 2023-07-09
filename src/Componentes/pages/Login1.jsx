@@ -6,29 +6,54 @@ import {
   Button,
   Heading} from '@chakra-ui/react'
 import styled from 'styled-components'
+import {useFormik} from 'formik'
+import * as Yup from 'yup'
 
 
 export const Login1 = () => {
 
+  const {handleChange, handleSubmit}= useFormik ({
+
+    initialValues: {
+      email:'',
+      password:'',
+    },
+
+    validationSchema : Yup.object({
+      nombre: Yup.string().required('Campo requerido'),
+      email: Yup.string().required('Campo requerido'),
+    }),
+
+    onSubmit: (formdata)=>{
+      console.log(formdata);
+    },
+ 
+  });
+
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <StyledFormControl >
           <Heading as='h2'style={{ fontFamily: 'Bai Jamjuree'}}>INICIAR SESION</Heading>
           <FormField>
             <FormLabel>Usuario</FormLabel>
             <StyledInput 
-              
+              type='text'
+              name='email'
+              onChange={handleChange}
             />
           </FormField>
 
           <FormField>
             <FormLabel>Contraseña</FormLabel>
             <StyledInput 
+            type='text'
+            name='password'
+            onChange={handleChange}
             />
           </FormField>
           
-          <StyledButton>
+          <StyledButton type="submit">
             ENVIAR
           </StyledButton>
 
