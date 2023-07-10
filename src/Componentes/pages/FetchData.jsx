@@ -22,20 +22,19 @@ const FetchData = () => {
     <div className="container my-4">
 
         <h2 style={{display: 'flex', justifyContent: 'center', margin:'30px'}}>
-        
         </h2>
         <div style={{ width: '100%', border:'2px solid block', display: 'flex',
             justifyContent: 'center', flexWrap:'wrap',
-            alignItems: 'center',gap:'30px'}}>
+            alignItems: 'center', gap:'30px'}}>
+
             {Data
                 ? Data.map ((items, index)=>(
                 <>
-                    <div className="container my-3" style={{width:"600px", boxShadow:"4px 4px 10px silver"}}>
+                    <div style={{width:"600px", boxShadow:"4px 4px 10px silver"}}>
                         <h2 style={{margin:'10px'}}>{items.title}</h2>
                     
-                        <div className="d-flex justify-content-center align-items-center">
+                        <div>
                             <img src={items.urlToImage} alt="/"
-                            className="img-fluid d-flex justify-content-center align-items-center"
                             style={{width:"100%", height:"300px", objectFit:"cover"}}
                             />
                             <p>{items.content}</p>
