@@ -27,6 +27,9 @@ const NavNuevo = () => {
                 </IconLogoMobile>
 
                 <Menu click={click}>
+                    <MenuItem onClick={() => ChangeClick()}>    
+                        <Link to="/FetchData">NOTICIAS DE HOY</Link>
+                    </MenuItem>
                     <MenuItem onClick={() => ChangeClick()}>
                         <Link to="/Secciones">SECCIONES</Link>
                     </MenuItem>
@@ -36,9 +39,7 @@ const NavNuevo = () => {
                     <MenuItem onClick={() => ChangeClick()}>    
                         <Link to="/Login1">LOGIN</Link>
                     </MenuItem>
-                    <MenuItem onClick={() => ChangeClick()}>    
-                        <Link to="/Fetch">NOTICIAS DE HOY</Link>
-                    </MenuItem>
+                    
                 </Menu>
             </NavbarWrapper>
         </NavbarContainer>

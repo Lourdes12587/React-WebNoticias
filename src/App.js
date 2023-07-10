@@ -6,9 +6,8 @@ import { Contacto } from './Componentes/pages/Contacto';
 import Layout from './Componentes/pages/Layout';
 import NavNuevo from './Componentes/comunes/NavBar/NavNuevo';
 import Footer from './Componentes/comunes/Footer/Footer';
-import News from './Componentes/pages/News';
 import { Login1 } from './Componentes/pages/Login1';
-import Fetch from './Componentes/pages/Fetch';
+import FetchData from './Componentes/pages/FetchData';
 
 
 
@@ -20,10 +19,10 @@ function App() {
         <NavNuevo/>
           <Routes>
             <Route path="/" element={<Layout/>}/>
-            <Route index element={<Secciones/>}/>
+            <Route index element={<FetchData/>}/>
+            <Route path="secciones" element={<Secciones/>}/> 
             <Route path="contacto" element={<Contacto/>}/>
-            <Route path="login1" element={<Login1/>}/>
-            <Route path="fetch" element={<Fetch/>}/>
+            <Route path="login1" element={<Login1/>}/>    
             {/* <Router path="*" element={<div>404-Found</div>}/>*/}
             <Route path="*" element={<Navigate replace to="/"/>}/>
           </Routes>
