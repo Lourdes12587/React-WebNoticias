@@ -38,7 +38,7 @@ export const Contacto = () => {
     <>
       <form onSubmit={handleSubmit}>
         <StyledFormControl >
-          <Heading as='h2'style={{ fontFamily: 'Bai Jamjuree'}}>CONTACTO</Heading>
+          <Heading as='h1'>CONTACTO</Heading>
           <FormField>
             <FormLabel>Nombre Completo</FormLabel>
             <StyledInput 
@@ -113,10 +113,9 @@ const FormField = styled.div`
 
 const StyledButton = styled(Button)`
   font-size: 0.9rem;
-  background: linear-gradient(90deg, #1a1826, #17153c);
+  background: linear-gradient(90deg, #584c99, #0f0b8e);
   color: white;
   transition: all 0.3s ease;
   padding: 10px 20px;
   cursor: pointer;
-  font-family: 'Bai Jamjuree', sans-serif;
 `

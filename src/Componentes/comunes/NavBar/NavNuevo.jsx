@@ -36,10 +36,6 @@ const NavNuevo = () => {
                     <MenuItem onClick={() => ChangeClick()}>    
                         <Link to="/Contacto">CONTACTO</Link>
                     </MenuItem>
-                    <MenuItem onClick={() => ChangeClick()}>    
-                        <Link to="/Login1">LOGIN</Link>
-                    </MenuItem>
-                    
                 </Menu>
             </NavbarWrapper>
         </NavbarContainer>
