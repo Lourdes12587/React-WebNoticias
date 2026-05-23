@@ -8,11 +8,13 @@ const Filtros = () => {
 
   const allSecciones = ['TODAS',...new Set(noticias.map(secciones => secciones.seccion))]
 
-  const [ categories, setCategories ] = useState(allSecciones);
+  const [ categories ] = useState(allSecciones);
+  const [ activeCategory, setActiveCategory ] = useState('TODAS');
 
   const [ articles, setArticles ] = useState(noticias);
 
   const filterCategory = (seccion) =>{
+    setActiveCategory(seccion);
     if (seccion === 'TODAS'){
       setArticles(noticias)
       return
@@ -24,7 +26,14 @@ const Filtros = () => {
   return (
     <>
         <Container>
-          <ButtonList categories={categories} filterCategory={filterCategory}/>
+          <section className="page-shell section-page">
+            <div className="section-heading">
+              <span>Archivo editorial</span>
+              <h1>Secciones</h1>
+              <p>Explora la cobertura por temas y encuentra rapido las historias que queres seguir.</p>
+            </div>
+          </section>
+          <ButtonList categories={categories} activeCategory={activeCategory} filterCategory={filterCategory}/>
           <ArticleList articles ={articles}/>
         </Container>
         

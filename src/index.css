@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300&family=IBM+Plex+Sans+Condensed&family=Sofia+Sans+Extra+Condensed:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700;800&display=swap');
 
 *{
     margin: 0;
@@ -7,9 +7,54 @@
     
 }
 
-body{
-    font-family: 'Bai Jamjuree', sans-serif;
-    background-color: rgb(47, 44, 44);
-    color: white;
+:root {
+    --brand: #1D2340;
+    --brand-soft: #293153;
+    --ink: #111827;
+    --muted: #5f6675;
+    --paper: #ffffff;
+    --paper-alt: #f5f3ee;
+    --line: #ddd8cc;
+    --accent: #F4C400;
+    --accent-dark: #9b7200;
+    --font-display: 'Libre Baskerville', Georgia, serif;
+    --font-sans: 'Source Sans 3', Helvetica, Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-sans);
+    background-color: var(--paper);
+    color: var(--ink);
+    padding-bottom: 92px;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}

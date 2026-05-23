@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
-export const Button = styled.div`
-    font-size: 1rem;
-    background: #1d1a1a;
-    color: white;
-    transition: all 0.3s ease;
-    padding: 20px 20px;
-    font-family: 'Bai Jamjuree', sans-serif;
-    display: inline-block;
+export const Button = styled.button`
+    font-size: 0.82rem;
+    background: ${({ 'aria-pressed': pressed }) => pressed ? 'var(--brand)' : 'var(--paper)'};
+    color: ${({ 'aria-pressed': pressed }) => pressed ? 'white' : 'var(--ink)'};
+    border: 1px solid ${({ 'aria-pressed': pressed }) => pressed ? 'var(--brand)' : 'var(--line)'};
+    border-radius: 999px;
+    transition: all 0.18s ease;
+    padding: 12px 16px;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
 
     &:hover{
-    background: linear-gradient(90deg, #1a1826, #17153c);;
-    border-bottom: 0.3rem solid white;
-    transition: 0.4s ease-in;
-
-  }
+      background: var(--brand);
+      border-color: var(--brand);
+      color: white;
+    }
     
 `;
 
